@@ -6,6 +6,9 @@
 //  Copyright © 2019 Claudia's Apps. All rights reserved.
 //
 
+
+// hey emma! There are notes written on the MyCollectionViewCell.swift file about what to do
+// they are questions mixed with my ideas just read it.  Please DO NOT delete it once you reaad it cause I need it for reference.
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -19,7 +22,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 12
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -31,7 +34,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         return cell
     }
-
 
 }
 
