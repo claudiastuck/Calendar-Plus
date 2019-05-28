@@ -13,7 +13,7 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    
+    var months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "Novemeber", "December"]
 
     @IBOutlet weak var myCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -22,17 +22,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return months.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:
                 "myCell", for: indexPath) as! MyCollectionViewCell
         cell.backgroundColor = UIColor.yellow
-        cell.myLabel.text = "Claudia"
+        cell.myLabel.text = months[indexPath.row]
        // cell.imageView.image = images[indexPath.row]
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
 
 }
