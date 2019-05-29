@@ -14,7 +14,7 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "Novemeber", "December"]
-
+    var colors: [UIColor] = [.red, .orange, .yellow, .green, .blue, .purple, .cyan, .magenta, .red, .orange, .green, .yellow]
     @IBOutlet weak var myCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:
                 "myCell", for: indexPath) as! MyCollectionViewCell
-        cell.backgroundColor = UIColor.yellow
+        cell.backgroundColor = colors[indexPath.row]
         cell.myLabel.text = months[indexPath.row]
        // cell.imageView.image = images[indexPath.row]
         
